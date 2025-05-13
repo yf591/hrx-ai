@@ -103,7 +103,7 @@ flowchart TB
 
 ### AI/ML
 - LangChain/LlamaIndex
-- GPT-4o/Claude 3 Opus
+- GPT-4o//Claude 3.7/Gemini 2.0
 - Hugging Face Transformers
 - ONNX Runtime
 - PyTorch/JAX
