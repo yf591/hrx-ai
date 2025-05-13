@@ -50,7 +50,7 @@
 ### 2.3 AI/ML コンポーネント
 
 - **LangChain/LlamaIndex**: AIエージェント構築フレームワーク
-- **OpenAI GPT-4o/Claude 3 Opus**: 最新大規模言語モデル
+- **GPT-4o//Claude 3.7/Gemini 2.0**: 最新大規模言語モデル
 - **Hugging Face Transformers**: カスタムモデル統合
 - **ONNX Runtime**: クロスプラットフォームモデル最適化
 - **PyTorch/JAX**: 高度なモデルトレーニングとチューニング
