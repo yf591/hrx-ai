@@ -1,4 +1,3 @@
-
 # HRX-AI 設計図・ビジュアル資料集
 
 ここでは、次世代スーパー人事AIエージェント「HRX-AI」の構造、開発計画、ユーザー体験、データフロー、プロセスを視覚的に表現。
@@ -27,7 +26,7 @@ flowchart TB
     
     subgraph "AI/ML層"
         LangChain["LangChain/<br>LlamaIndex"]
-        LLMs["GPT-4o/Claude 3"]
+        LLMs["GPT-4o/Claude 3/Gemini 2.0 or 2.5"]
         HF["HuggingFace<br>Transformers"]
         ONNX["ONNX Runtime"]
         PyTorch["PyTorch/JAX"]
@@ -103,7 +102,7 @@ gantt
     tickInterval 1week
     
     section 月1: 基盤構築
-    プロジェクト設定・技術スタック構築   :a1, 2024-01-01, 7d
+    プロジェクト設定・技術スタック構築   :a1, 2025-05-15, 7d
     認証・データモデル・UIフレームワーク :a2, after a1, 7d
     コアAPI・DB・初期AI統合             :a3, after a2, 7d
     基本ダッシュボード・初期デプロイ     :a4, after a3, 7d
@@ -164,30 +163,47 @@ mindmap
       面接最適化
       バイアス検出
       採用ROI計測
+      チャネル効率分析
     人材開発
       パフォーマンス管理
       スキルマッピング
       成長計画
       メンタリング
       学習推奨
+      キャリアシミュレーション
     組織設計
       組織分析
       人員計画
       ワークスタイル分析
       チーム最適化
       コラボレーション分析
+      適正配置AI
     エンゲージメント
       リテンション予測
       センチメント分析
       ウェルネス管理
       早期介入
       ロイヤリティ強化
+      コホート分析
+    給与・報酬
+      市場ベンチマーク
+      公平性分析
+      報酬最適化
+      インセンティブ戦略
+      総報酬ビジュアライザー
+    生産性分析
+      業績メトリクス
+      ワークスタイル最適化
+      人的資本ROI
+      時間効率パターン
+      チーム相乗効果
     戦略分析
       インサイトハブ
       予測シミュレーション
       What-If分析
       戦略アドバイザリー
       ビジネスKPI連携
+      シナリオプランニング
     持続可能性
       DEI分析
       ESGフレームワーク
@@ -271,7 +287,7 @@ flowchart TD
     Interview1 --> AIFeedback[AI面接分析]
     AIFeedback --> Score{評価判定}
     
-    Score -->|高評価| Interview2[最終面接]
+    Score -->|高評価| Interview2[二次面接・最終面接]
     Score -->|要検討| Panel[評価会議]
     Score -->|不適合| Reject[お断り連絡]
     
