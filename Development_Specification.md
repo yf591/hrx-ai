@@ -41,7 +41,7 @@
 ### 2.2 バックエンド
 
 - **Python 3.11+ (FastAPI)**: 高性能な非同期APIフレームワーク
-- **Firebase/Supabase**: 認証、リアルタイムデータベース、ストレージ
+- **Firebase/Supabase（原則としてFirebaseを使用）**: 認証、リアルタイムデータベース、ストレージ
 - **Stripe**: サブスクリプション課金システム
 - **JWT/OIDC**: セキュアな認証トークン管理
 - **Redis/Upstash**: 高速キャッシュと一時データ処理
@@ -323,7 +323,7 @@
   |-- リアルタイムイベント処理
   
 [データ層]
-  |-- Firestore/Supabase
+  |-- Firestore
   |-- ベクトルデータベース
   |-- Redis/Upstash キャッシュ
   |-- 構造化データストレージ
@@ -340,7 +340,7 @@
 
 ### 4.3 データフロー設計
 
-- リアルタイムアップデート (Firebase RTDB/Supabase)
+- リアルタイムアップデート (Firebase RTDB)
 - バッチ処理パイプライン (定期分析処理)
 - イベント駆動アーキテクチャ (Webhooks/Pub-Sub)
 - キャッシュ戦略 (Redis, Client-side, CDN)
@@ -563,7 +563,7 @@ export default withAuth(handler);
 
 ### 7.2 リアルタイムデータ処理フロー
 
-#### 7.2.1 Firestore/Supabaseリアルタイムアップデート
+#### 7.2.1 Firestoreリアルタイムアップデート（**要修正**）
 
 ```typescript
 // 従業員データの変更を監視するhook
